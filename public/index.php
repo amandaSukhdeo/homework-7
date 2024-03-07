@@ -10,8 +10,9 @@ use app\controllers\MainController;
 use app\controllers\UserController;
 use app\controllers\PostController;
 
-
+// superglobal to get information from the server 
 $url = $_SERVER["REQUEST_URI"];
+//echo($url); 
 
 //todo add a switch statement router to route based on the url
 switch($url) {
