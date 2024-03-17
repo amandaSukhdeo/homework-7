@@ -1,0 +1,29 @@
+Amanda Sukhdeo
+Internet and Web Programming
+Spring 2024 
+
+2. What are some examples of how PHP and JavaScript are alike and how they differ?
+    Both PHP and JavaScript are object-oriented languages. They are easy to read and understand 
+    and use HyperText Transfer Protocols to execute a program. Being scripting languages, they 
+    are interpreted rather than compiled and are weakly typed. However, PHP differs from JavaScript 
+    in that PHP is a server-side scripting language that runs on the web server instead of a client 
+    machine, while JavaScript is a client-side language that runs on a user's laptop, phone, or tablet. 
+    PHP is primarily used for backend development purposes as it can quickly scale websites, and its 
+    performance and security are top-notch. In comparison, JavaScript is mainly used for frontend 
+    development purposes and is highly regarded for creating user-friendly websites.
+
+3. Define MVC, what are the responsibilities of each piece?
+    MVC stands for Model-View-Controller, a software architectural pattern 
+    commonly used in the development of web applications. This pattern enables 
+    developers to separate an application into three interconnected components, 
+    each with distinct responsibilities, to organize the code in a way that 
+    separates internal representations of information from the ways information 
+    is presented to and accepted from the user. The model component represents 
+    the data and the business logic of the application. It is responsible for 
+    accessing, storing, and defining the rules for how the data can be changed 
+    and manipulated. The view component is responsible for presenting data to 
+    the user. It displays data from the model to the user and generates the user 
+    interface, which can change dynamically based on changes in the model. Lastly, 
+    the controller is an intermediary between the model and the view. It listens to 
+    user inputs communicated through the view, processes them, and returns the output 
+    display (view) to the user.

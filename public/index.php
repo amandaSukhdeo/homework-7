@@ -10,23 +10,25 @@ use app\controllers\MainController;
 use app\controllers\UserController;
 use app\controllers\PostController;
 
-$uri = $_SERVER["REQUEST_URI"];
-$method = $_SERVER["REQUEST_METHOD"];
+// superglobal to get information from the server 
+$url = $_SERVER["REQUEST_URI"];
+//echo($url); 
 
-if($uri === "/posts" and $method === "GET"):
-    $postController = new PostController(); 
-    $posts = $postController->submitPosts();
-
-elseif($uri === "/posts" and $method === "POST"):
-    $postController = new PostController(); 
-    $posts = $postController->validatePost();
-
-elseif ($uri === "/"):
+//todo add a switch statement router to route based on the url
+switch($url) {
+    //if it is "/posts" return an array of posts via the post controller
+    case "/posts":
+        $postController = new PostController(); 
+        $posts = $postController->showPosts(); 
+        break;
+    //if it is "/" return the homepage view from the main controller
+    case "/":
         $mainController = new MainController(); 
         $mainController->homePage(); 
-
-else: 
+        break; 
+    //if it is something else return a 404 view from the main controller
+    default:
         $mainController = new MainController(); 
-        $mainController->notFound();  
-        
-endif; 
+        $mainController->notFound(); 
+        break;       
+}
